@@ -1,8 +1,8 @@
 <template>
     <div class="sidebar">
         <ul id="example-1">
-            <li v-for="section in sections" v-bind:key="section">
-                {{ section }}
+            <li v-for="(value, name) in $t('sections')" v-bind:key="name">
+                <a :href="'#' + name"> {{ value }} </a>
             </li>
         </ul>
     </div>
@@ -26,6 +26,7 @@
     }
     .sidebar > ul {
         list-style: none;
+        padding: 0;
     }
     .sidebar > ul > li {
         padding: 10px 0px;

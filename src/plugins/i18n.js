@@ -4,11 +4,33 @@ Vue.use(VueI18n);
 
 
 const messages = {
-    'en': {
-        education: 'Education'
+    en: {
+        sections: {
+            education: 'Education',
+            personal_projects: 'Personal Projects',
+            professional_experience: 'Professional Experience',
+        },
+        education: [
+            {
+                title: 'University of Technology of Compiègne',
+                location: 'Compiègne',
+                date: '2015-2021',
+                description: 'lorem',
+            },
+            {
+                title: 'École de technologie supérieure',
+                location: 'Montréal',
+                date: '2019-2021',
+                description: 'lorem',
+            },
+        ]
     },
-    'fr': {
-        education: 'Éducation'
+    fr: {
+        sections: {
+            education: 'Éducation',
+            personal_projects: 'Projets Personnels',
+            professional_experience: 'Expérience Professionnelle',
+        },
     }
 };
 

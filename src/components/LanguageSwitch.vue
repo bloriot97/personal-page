@@ -1,6 +1,9 @@
 <template>
     <div>
-        <button type="button" v-on:click="switchLocale()">{{selectedLanguage}}</button>
+        <button type="button" v-on:click="switchLocale()">
+            <span v-if="selectedLanguage === 'en'">FR</span>
+            <span v-else>EN</span>
+        </button>
     </div>
 </template>
 
