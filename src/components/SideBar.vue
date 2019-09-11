@@ -17,12 +17,11 @@
     }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .sidebar {
         width: 100%;
         text-align: center;
         font-size: 1.5em;
-
     }
     .sidebar > ul {
         list-style: none;
