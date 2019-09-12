@@ -5,18 +5,21 @@
                 <div>
                     <div>
                         <OptionalLink :text="title" :link="link" />
+                        <a v-if="moreInfo" v-on:click="$emit('more')" class="more">({{$t('more')}})</a>
                     </div>
-                    <div class="sub_title" v-if="location"> <OptionalLink :text="location" :link="location_link" />, <span class="location"> {{geoLocation}}</span> </div>
+                    <div class="sub_title" v-if="location">
+                        <OptionalLink :text="location" :link="location_link"/>, <span class="location"> {{geoLocation}}</span>
+                    </div>
                 </div>
                 <div class="date nobreak"> ({{date}}) </div>
             </h2>
             <div>
                 <ul>
                     <li v-for="(value, index) in descriptions" v-bind:key="index">
-                        {{value}}
-                        <span v-if="techno" class="techno">
+                        {{value.body}}
+                        <span v-if="value.key_outcome" class="techno">
                             (
-                                {{ techno.join(', ')}}
+                                {{ value.key_outcome.join(', ')}}
                             )
                         </span>
                     </li>
@@ -41,8 +44,8 @@
             geoLocation: String,
             date: String,
             descriptions: Array,
-            techno: Array,
             link: String,
+            moreInfo: Object,
         }
     }
 </script>
@@ -66,5 +69,13 @@
     .techno {
         font-size: 0.9em;
         color: $sub_title_color;
+    }
+    .more {
+        font-size: 0.7em;
+        color: $sub_title_color;
+    }
+    .more:hover {
+        color: $link_color;
+        transition: 0.1s;
     }
 </style>

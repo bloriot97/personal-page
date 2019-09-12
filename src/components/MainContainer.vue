@@ -1,6 +1,29 @@
 <template>
     <div id="main_container">
-        <h1 id="education">{{ $t('sections.education') }}</h1>
+        <div v-for="(section_name, section_id) in $t('sections')" v-bind:key="section_name">
+            <h1 :id="section_id">{{ $t('sections.' + section_id) }}</h1>
+            <ul class="main_list">
+                <CVItem
+                        v-for="(edu, name) in $t(section_id)"
+                        v-bind:key="name"
+                        :title="edu.title"
+                        :location="edu.location"
+                        :location_link="edu.location_link"
+                        :geoLocation="edu.geoLocation"
+                        :date="edu.date"
+                        :descriptions="edu.descriptions"
+                        :link="edu.link"
+                        :moreInfo="edu.moreInfo"
+                        v-on:more="openModal(section_id, name)"
+                />
+            </ul>
+        </div>
+        <Modal
+                ref="modal"
+                :section="modalContent.section"
+                :name="modalContent.name"
+        />
+        <!-- <h1 id="education">{{ $t('sections.education') }}</h1>
         <ul class="main_list">
             <CVItem
                     v-for="(edu, name) in $t('education')"
@@ -55,18 +78,35 @@
                     :descriptions="edu.descriptions"
                     :techno="edu.techno"
             />
-        </ul>
-
+        </ul> -->
+        <footer> Designed and developed by Benjamin Loriot </footer>
     </div>
 </template>
 
 <script>
     import CVItem from './CVItem.vue'
+    import Modal from "./Modal";
 
     export default {
         name: "MainContainer",
         components: {
+            Modal,
             CVItem,
+        },
+        data() {
+            return {
+                modalContent: {
+                    section: 'school_projects',
+                    name: 'hackathon',
+                }
+            }
+        },
+        methods: {
+            openModal(section, name) {
+                this.modalContent.section = section
+                this.modalContent.name = name
+                this.$refs.modal.open()
+            }
         },
     }
 </script>
@@ -74,7 +114,7 @@
 <style scoped lang="scss">
 #main_container{
     text-align: left;
-    padding: 0px 50px;
+    padding: 30px 50px;
     @media (max-width: $breakpoint-tablet) {
         padding: 0px;
     }
@@ -88,4 +128,14 @@
         padding-left: 30px;
     }
 }
+    h1 {
+        border-bottom: 3px solid currentColor;
+        display: inline-block;
+        line-height: 0.85;
+        text-shadow:
+                2px 2px $clear_primary_color,
+                2px -2px $clear_primary_color,
+                -2px 2px $clear_primary_color,
+                -2px -2px $clear_primary_color;
+    }
 </style>

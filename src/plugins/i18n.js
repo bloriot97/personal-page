@@ -11,6 +11,10 @@ const messages = {
             school_projects: 'School Projects',
             professional_experience: 'Professional Experience',
         },
+        description: 'Computer Science Student Looking for an internship starting fall 2021. Plus I should put some more blabla. Even more and more and mooooore.',
+        email: 'bloriot97@gmail.com',
+        phone_number: '(+33) 6 77 96 17 22',
+        github: 'https://github.com/bloriot97',
         education: {
             utc: {
                 title: 'Master in Computer Science Engineering with a major in Data Mining',
@@ -19,8 +23,12 @@ const messages = {
                 geoLocation: 'Compiègne, France',
                 date: '2015-2021',
                 descriptions: [
-                    'Indepth study in computer science, operational research, programing techniques, mathematics and statistics.',
-                    'Large variety of fields of study, including physics, chimistry, humanities and economy.'
+                    {
+                        body: 'Indepth study in computer science, operational research, programing techniques, mathematics and statistics.',
+                    },
+                    {
+                        body: 'Large variety of fields of study, including physics, chimistry, humanities and economy.',
+                    }
                 ],
             },
             ets: {
@@ -28,28 +36,41 @@ const messages = {
                 location: 'École de technologie supérieure',
                 geoLocation: 'Montreal, Canada',
                 date: '2019-2021',
-                descriptions: ['lorem'],
+                descriptions: [
+                    {
+                        body: 'Straightening of my knowledge in various fields of computer science including user interface, internet security.',
+                    },
+                    {
+                        body: 'Managerial skill such as project management, and portfolio management.',
+                    },
+                ],
             },
             ntua: {
                 title: 'Semester Abroad',
                 location: 'National Technical University of Athens',
                 geoLocation: 'Athens, Greece',
                 date: 'Spring 2017',
-                descriptions: ['lorem'],
+                descriptions: [
+                ],
             },
         },
         personal_projects: {
             names: {
-                title: 'French name trend visualisation from the past century until today',
+                title: 'French names trend visualisation from the past century until today',
                 link: 'https://bloriot97.github.io/names/',
                 date: 'Fall 2019',
-                techno: [
-                    'Jupyter',
-                    'Data Analysis',
-                    'Vue',
-                ],
                 descriptions: [
-                    'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                    {
+                        body: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                        key_outcome: [
+                            'Jupyter',
+                            'Data Analysis',
+                            'Vue',
+                        ],
+                    },
+                    {
+                        body: 'Plus some business case related stuff..........'
+                    },
                 ],
             }
         },
@@ -59,12 +80,15 @@ const messages = {
                 location: 'University of Technology of Compiègne',
                 geoLocation: 'Compiègne, France',
                 date: 'Winter 2017',
-                techno: [
-                    'Angular',
-                    'node.js',
-                ],
                 descriptions: [
-                    'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                    {
+                        body: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                        key_outcome: [
+                            'Angular',
+                            'node.js',
+                            'Arduino',
+                        ],
+                    },
                 ],
             },
             UViz: {
@@ -72,13 +96,15 @@ const messages = {
                 location: 'University of Technology of Compiègne',
                 geoLocation: 'Compiègne, France',
                 date: 'Winter 2017',
-                techno: [
-                    'Neo4J',
-                    'Docker',
-                    'node.js',
-                ],
                 descriptions: [
-                    'A graph visualization service that allows UTC students to analyse and plan their academic career.',
+                    {
+                        body: 'A graph visualization service that allows UTC students to analyse and plan their academic career.',
+                        key_outcome: [
+                            'Neo4J',
+                            'Docker',
+                            'node.js',
+                        ],
+                    },
                 ],
             },
             hackathon: {
@@ -86,13 +112,23 @@ const messages = {
                 location: 'University of Technology of Compiègne',
                 geoLocation: 'Compiègne, France',
                 date: 'Nov. 2017',
-                techno: [
-                    'Arduino',
-                    'C++',
-                ],
                 descriptions: [
-                    'Development of a concept of car network in order to improve security not only by communicating but also by sharing the sensors.',
+                    {
+                        body: 'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
+                        key_outcome: [
+                            'Arduino',
+                            'C++',
+                        ],
+                    },
                 ],
+                moreInfo: {
+                    pictures: ['hackathon.jpg'],
+                    description: [
+                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
+                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
+                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
+                    ],
+                }
             },
         },
         professional_experience: {
@@ -102,12 +138,21 @@ const messages = {
                 geoLocation: 'Stockholm',
                 date: 'Summer 2019',
                 descriptions: [
-                    'Some description',
-                ],
-                techno: [
-                    'Go',
-                    'Python',
-                    'Dgraph',
+                    {
+                        body: 'Design and development of a software to measure the health of open source communities.',
+                        key_outcome: [
+                            'Python',
+                            'Dgraph',
+                            'Data Science',
+                        ],
+                    },
+                    {
+                        body: 'Improvement of a platform to mine data from open source communities.',
+                        key_outcome: [
+                            'Go',
+                            'Dgraph',
+                        ],
+                    },
                 ],
             },
             kth: {
@@ -116,10 +161,14 @@ const messages = {
                 geoLocation: 'Stockholm',
                 date: 'Fall 2018',
                 descriptions: [
-                    'Some description',
+                    {
+                        body: 'On-the-job immersion into a computer science research lab. ' +
+                            'I had the opportunity to work on my own project and to collaborate on the writing of a scientific paper.',
+                    },
                 ],
             },
         },
+        more: 'see more',
     },
     fr: {
         sections: {
@@ -128,32 +177,6 @@ const messages = {
             school_projects: 'Projets Étudiants',
             professional_experience: 'Expérience Professionnelle',
         },
-        education: {
-            utc: {
-                title: 'Diplôme d\'ingénieur en génie Informatique avec une spécialisation en fouille de données' ,
-                location: 'Université de technologie de Compiègne',
-                geoLocation: 'Compiègne',
-                date: '2015-2021',
-                descriptions: [
-                    'Indepth study in computer science, operational research, programing techniques, mathematics and statistics.',
-                    'Large variety of fields of study, including physics, chimistry, humanities and economy.'
-                ],
-            },
-            ets: {
-                title: 'Maitrise en genie des technologies de l\'information',
-                location: 'École de technologie supérieure',
-                geoLocation: 'Montréal',
-                date: '2019-2021',
-                descriptions: ['lorem'],
-            },
-            ntua: {
-                title: 'Semestre d\'échange',
-                location: 'Université polytechnique nationale d\'Athènes',
-                geoLocation: 'Athènes',
-                date: 'Printemps 2017',
-                descriptions: ['lorem'],
-            },
-        }
     }
 };
 
