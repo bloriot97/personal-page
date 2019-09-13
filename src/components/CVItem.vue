@@ -6,6 +6,7 @@
                     <div>
                         <OptionalLink :text="title" :link="link" />
                         <a v-if="moreInfo" v-on:click="$emit('more')" class="more">({{$t('more')}})</a>
+                        <a v-if="transcript" :href="transcript" class="more">({{$t('transcript')}})</a>
                     </div>
                     <div class="sub_title" v-if="location">
                         <OptionalLink :text="location" :link="location_link"/>, <span class="location"> {{geoLocation}}</span>
@@ -45,6 +46,7 @@
             date: String,
             descriptions: Array,
             link: String,
+            transcript: String,
             moreInfo: Object,
         }
     }

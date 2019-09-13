@@ -2,7 +2,7 @@
     <div id="main_container">
         <div v-for="(section_name, section_id) in $t('sections')" v-bind:key="section_name">
             <h1 :id="section_id">{{ $t('sections.' + section_id) }}</h1>
-            <ul class="main_list">
+            <ul class="main_list" v-if="section_id != 'skills'">
                 <CVItem
                         v-for="(edu, name) in $t(section_id)"
                         v-bind:key="name"
@@ -13,10 +13,59 @@
                         :date="edu.date"
                         :descriptions="edu.descriptions"
                         :link="edu.link"
+                        :transcript="edu.transcript"
                         :moreInfo="edu.moreInfo"
                         v-on:more="openModal(section_id, name)"
                 />
             </ul>
+            <div v-else>
+                <h2>
+                    {{$t('skills.cs.title')}}
+                </h2>
+                <div id="cs">
+                    <div
+                            v-for="(cs_section, id) in $t('skills.cs.sections')"
+                            v-bind:key="id"
+                            class="cs_section"
+                    >
+                        <h3>
+                            {{cs_section.title}}
+                        </h3>
+                        <div class="item_list">
+                            <span
+                                    v-for="(item, id) in cs_section.content"
+                                    v-bind:key="id"
+                                    class="cs_item"
+                            >
+                                {{item}}
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <h2>
+                    {{$t('skills.languages.title')}}
+                </h2>
+                <ul class="languages">
+                    <li
+                            v-for="(language, id) in $t('skills.languages.content')"
+                            v-bind:key="id"
+                    >
+                        {{language.name}} ({{language.level}})
+                    </li>
+                </ul>
+                <h2>
+                    {{$t('skills.management.title')}}
+                </h2>
+                <ul class="management">
+                    <li
+                            v-for="skill in $t('skills.management.content')"
+                            v-bind:key="skill"
+                    >
+                        {{skill}}
+                    </li>
+                </ul>
+            </div>
         </div>
         <Modal
                 ref="modal"
@@ -137,5 +186,23 @@
                 2px -2px $clear_primary_color,
                 -2px 2px $clear_primary_color,
                 -2px -2px $clear_primary_color;
+    }
+    #cs {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cs_section {
+        padding: 0 10px;
+        max-width: 250px;
+        & > h3 {
+            margin-top: 0;
+        }
+        text-align: justify;
+    }
+    .cs_item {
+
+    }
+    .cs_item:not(:last-child)::after {
+        content: "\00b7";
     }
 </style>

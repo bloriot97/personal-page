@@ -7,41 +7,46 @@ const messages = {
     en: {
         sections: {
             education: 'Education',
+            professional_experience: 'Professional Experience',
             personal_projects: 'Personal Projects',
             school_projects: 'School Projects',
-            professional_experience: 'Professional Experience',
+            skills: 'Language & Computer Skills',
         },
-        description: 'Computer Science Student Looking for an internship starting fall 2021. Plus I should put some more blabla. Even more and more and mooooore.',
+        description: 'Computer Science Student Looking for a graduate internship starting from fall 2021. Plus I should put some more blabla. Even more and more and mooooore.',
         email: 'bloriot97@gmail.com',
         phone_number: '(+33) 6 77 96 17 22',
         github: 'https://github.com/bloriot97',
         education: {
-            utc: {
-                title: 'Master in Computer Science Engineering with a major in Data Mining',
-                location_link: 'https://www.utc.fr/en.html',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: '2015-2021',
-                descriptions: [
-                    {
-                        body: 'Indepth study in computer science, operational research, programing techniques, mathematics and statistics.',
-                    },
-                    {
-                        body: 'Large variety of fields of study, including physics, chimistry, humanities and economy.',
-                    }
-                ],
-            },
             ets: {
-                title: 'Master of Information Technology Engineering',
+                title: 'Master of Engineering in Information Technology',
                 location: 'École de technologie supérieure',
                 geoLocation: 'Montreal, Canada',
                 date: '2019-2021',
                 descriptions: [
                     {
-                        body: 'Straightening of my knowledge in various fields of computer science including user interface, internet security.',
+                        body: 'Straightening of my knowledge in various fields of computer science including user interface and internet security.',
                     },
                     {
                         body: 'Managerial skill such as project management, and portfolio management.',
+                    },
+                ],
+            },
+            utc: {
+                title: 'Master of Engineering in Computer Science and Data Mining',
+                location_link: 'https://www.utc.fr/en.html',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: '2015-2021',
+                transcript: 'docs/transcript.pdf',
+                descriptions: [
+                    {
+                        body: 'In-depth study in computer science, operational research, programing techniques, mathematics and statistics.',
+                    },
+                    {
+                        body: 'Data science and engineering, decision support, and distributed computation.',
+                    },
+                    {
+                        body: 'Large variety of fields of study, including physics, chimistry, humanities and economy.',
                     },
                 ],
             },
@@ -61,18 +66,40 @@ const messages = {
                 date: 'Fall 2019',
                 descriptions: [
                     {
-                        body: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                        body: 'Analysis of the data, and creation of an interactive visualisation.',
                         key_outcome: [
                             'Jupyter',
                             'Data Analysis',
+                            't-SNE',
                             'Vue',
                         ],
                     },
+                ],
+            },
+            hackathon: {
+                title: 'Wining team of the Hackathon UTC 2017',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Nov. 2017',
+                descriptions: [
                     {
-                        body: 'Plus some business case related stuff..........'
+                        body: 'Designing of a concept of a car network that improves security not only by communicating information but also by sharing sensors.',
+                        key_outcome: [
+                            'Arduino',
+                            'C++',
+                        ],
                     },
                 ],
-            }
+                moreInfo: {
+                    pictures: ['hackathon.jpg'],
+                    description: [
+                        'During 24h we had the opportunity to design and implement a solution about the car of the future.',
+                        'We formed a team of 7 students, 6 computer science engineering student background and one mechanical engineering student.',
+                        'After some time we came up with a solution of sensor sharing between cars in order for them to have share knowledge at a lower level.',
+                        'Then we decided to implement a small proof of concept, as we did not have access to a connected car we created our own.'
+                    ],
+                }
+            },
         },
         school_projects: {
             pollutrack: {
@@ -107,29 +134,6 @@ const messages = {
                     },
                 ],
             },
-            hackathon: {
-                title: 'Wining team of the Hackathon UTC 2017',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Nov. 2017',
-                descriptions: [
-                    {
-                        body: 'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
-                        key_outcome: [
-                            'Arduino',
-                            'C++',
-                        ],
-                    },
-                ],
-                moreInfo: {
-                    pictures: ['hackathon.jpg'],
-                    description: [
-                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
-                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
-                        'Development of a concept of car network in order to improve security not only by communicating information but also by sharing sensors.',
-                    ],
-                }
-            },
         },
         professional_experience: {
             combient: {
@@ -139,7 +143,7 @@ const messages = {
                 date: 'Summer 2019',
                 descriptions: [
                     {
-                        body: 'Design and development of a software to measure the health of open source communities.',
+                        body: 'Design and implementation of a software to measure the health of open source communities.',
                         key_outcome: [
                             'Python',
                             'Dgraph',
@@ -162,17 +166,99 @@ const messages = {
                 date: 'Fall 2018',
                 descriptions: [
                     {
-                        body: 'On-the-job immersion into a computer science research lab. ' +
-                            'I had the opportunity to work on my own project and to collaborate on the writing of a scientific paper.',
+                        body: 'On-the-job immersion into a computer science research lab.',
+                    },
+                    {
+                        body: 'I had the opportunity to work on my own project and to collaborate on the writing of a scientific paper.',
                     },
                 ],
             },
         },
+        skills:{
+            languages: {
+                title: 'Languages',
+                content: [
+                    {
+                        name: 'French',
+                        level: 'Native'
+                    },
+                    {
+                        name: 'English',
+                        level: 'Advanced, TOEIC 875'
+                    },
+                    {
+                        name: 'Spanish',
+                        level: 'Basic notions'
+                    },
+                ]
+            },
+            cs: {
+                title: 'Computer',
+                sections: [
+                    {
+                        title: 'Data Mining',
+                        content: [
+                            'XGBoost',
+                            't-SNE',
+                            'PCA',
+                            'Co-clustering',
+                            'SVM',
+                            'Random forest',
+                            'Bayesian decision theory',
+                            'distributed computation',
+                            'Jupyter',
+                            'Matplotlib',
+                            'Seaborn',
+                            'D3.js'
+                        ]
+                    },
+                    {
+                        title: 'Programming languages',
+                        content: [
+                            'Python',
+                            'Go',
+                            'Javascript',
+                            'Java',
+                            'Bash',
+                            'R',
+                        ]
+                    },
+                    {
+                        title: 'Front & Back',
+                        content: [
+                            'node.js',
+                            'SQL',
+                            'Graph-database (Neo4j, Dgraph)',
+                            'MongoDB',
+                            'Vue',
+                            'React (notions)',
+                        ]
+                    },
+                    {
+                        title: 'Other',
+                        content: [
+                            'CI/CD',
+                            'Academic paper reading & writing',
+                            'Arduino',
+                            'Latex',
+                        ]
+                    },
+                ]
+            },
+            management: {
+                title: 'Management',
+                content: [
+                    'Project Management',
+                    'Portfolio Management',
+                ]
+            },
+        },
         more: 'see more',
+        transcript: 'transcript',
     },
     fr: {
         sections: {
-            education: 'Éducation',
+            education: 'Formation',
             personal_projects: 'Projets Personnels',
             school_projects: 'Projets Étudiants',
             professional_experience: 'Expérience Professionnelle',

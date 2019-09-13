@@ -79,6 +79,7 @@ export default {
     }
     #sidebar_container {
         width: $side_bar_width;
+        //min-width: 280px;
         background-color: $side_bar_color;
         text-align: center;
         padding: 20px;
