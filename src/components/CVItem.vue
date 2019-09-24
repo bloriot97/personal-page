@@ -66,7 +66,7 @@
     }
     .title {
         @media screen and (max-width: $breakpoint-phone) {
-            padding-bottom: 7px;
+            padding-bottom: 12px;
         }
     }
     .sub_title{
@@ -87,5 +87,8 @@
     .more:hover {
         color: $link_color;
         transition: 0.1s;
+    }
+    ul {
+        padding-left: 25px;
     }
 </style>
