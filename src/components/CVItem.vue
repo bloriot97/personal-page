@@ -57,7 +57,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.4em;
+        margin-bottom: 0em;
+
     }
     .date{
         font-size: 0.7em;
@@ -65,8 +66,10 @@
     }
     .sub_title{
         font-size: 0.7em;
-        padding-left: 10px;
+        //padding-left: 10px;
+        transform: translate(0px, -4px);
         color: $sub_title_color;
+        font-style: italic;
     }
     .techno {
         font-size: 0.9em;

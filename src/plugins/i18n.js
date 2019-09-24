@@ -12,7 +12,7 @@ const messages = {
             school_projects: 'School Projects',
             skills: 'Language & Computer Skills',
         },
-        description: 'Computer Science Student Looking for a graduate internship starting from fall 2021. Plus I should put some more blabla. Even more and more and mooooore.',
+        description: 'I am a computer science student curious about everything but mostly interested in data science, data engineering and web technologies. I am currently pursuing a double degree in France and Canada.',
         email: 'bloriot97@gmail.com',
         phone_number: '(+33) 6 77 96 17 22',
         github: 'https://github.com/bloriot97',
@@ -20,6 +20,7 @@ const messages = {
             ets: {
                 title: 'Master of Engineering in Information Technology',
                 location: 'École de technologie supérieure',
+                location_link: 'https://www.etsmtl.ca/en/Home',
                 geoLocation: 'Montreal, Canada',
                 date: '2019-2021',
                 descriptions: [
@@ -53,6 +54,7 @@ const messages = {
             ntua: {
                 title: 'Semester Abroad',
                 location: 'National Technical University of Athens',
+                location_link: 'https://www.ntua.gr/en/',
                 geoLocation: 'Athens, Greece',
                 date: 'Spring 2017',
                 descriptions: [
@@ -102,6 +104,22 @@ const messages = {
             },
         },
         school_projects: {
+            dev: {
+                title: 'Embedding of developers based on the libraries they use',
+                link: 'docs/TX.pdf',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Spring 2019',
+                descriptions: [
+                    {
+                        body: 'The goal of this research project is to find new techniques to asses who are the core developers of a project.',
+                        key_outcome: [
+                            'Graph analysis',
+                            'Co-clustering',
+                        ],
+                    },
+                ],
+            },
             pollutrack: {
                 title: 'Pollution tracking service',
                 location: 'University of Technology of Compiègne',
@@ -139,6 +157,7 @@ const messages = {
             combient: {
                 title: 'Developer Intern Summer Internship',
                 location: 'Combient',
+                location_link: 'https://www.combient.com/',
                 geoLocation: 'Stockholm',
                 date: 'Summer 2019',
                 descriptions: [
@@ -162,6 +181,7 @@ const messages = {
             kth: {
                 title: 'Research Intern',
                 location: 'KTH Royal Institute of Technology',
+                location_link: 'https://www.kth.se/en',
                 geoLocation: 'Stockholm',
                 date: 'Fall 2018',
                 descriptions: [

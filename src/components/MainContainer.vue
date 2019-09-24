@@ -1,6 +1,10 @@
 <template>
     <div id="main_container">
-        <div v-for="(section_name, section_id) in $t('sections')" v-bind:key="section_name">
+        <div
+                v-for="(section_name, section_id) in $t('sections')"
+                v-bind:key="section_name"
+                class="section"
+        >
             <h1 :id="section_id">{{ $t('sections.' + section_id) }}</h1>
             <ul class="main_list" v-if="section_id != 'skills'">
                 <CVItem
@@ -165,7 +169,7 @@
     text-align: left;
     padding: 30px 50px;
     @media (max-width: $breakpoint-tablet) {
-        padding: 0px;
+        padding: 15px;
     }
 }
 .main_list {
@@ -181,24 +185,35 @@
         border-bottom: 3px solid currentColor;
         display: inline-block;
         line-height: 0.85;
+        margin: 0em;
         text-shadow:
                 2px 2px $clear_primary_color,
                 2px -2px $clear_primary_color,
                 -2px 2px $clear_primary_color,
                 -2px -2px $clear_primary_color;
     }
+    .section{
+        margin-bottom: 64px;
+    }
     #cs {
         display: flex;
         justify-content: space-between;
-    }
-    .cs_section {
-        padding: 0 10px;
-        max-width: 250px;
-        & > h3 {
-            margin-top: 0;
+        & > .cs_section {
+            padding: 0 10px;
+            max-width: 250px;
+            & > h3 {
+                margin-top: 0;
+            }
+            text-align: justify;
+            @media (max-width: $breakpoint-tablet) {
+                margin-bottom: 30px;
+            }
         }
-        text-align: justify;
+        @media (max-width: $breakpoint-tablet) {
+            flex-wrap: wrap;
+        }
     }
+
     .cs_item {
 
     }

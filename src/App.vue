@@ -86,14 +86,21 @@ export default {
         color: set-button-text-color($side_bar_color);
         @media screen and (max-width: $breakpoint-phone) {
             width: 100%;
+            padding: 00px;
+        }
+        & > #description {
+            padding: 20px 0px 40px 0;
+            @media screen and (max-width: $breakpoint-phone) {
+                padding: 20px 10px 40px 10px;
+            }
+        }
+        & > .sidebar > ul {
+            padding: 0px 10px;
         }
     }
     #picture {
         width: 80%;
         border-radius: 50%;
-    }
-    #description {
-        padding: 20px 0px 40px 0;
     }
     #language_switch{
         position: fixed;
@@ -105,7 +112,6 @@ export default {
         @media screen and (max-width: $breakpoint-phone) {
             width: 100%;
         }
-
     }
     a {
         color: inherit;
