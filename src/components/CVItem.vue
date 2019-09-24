@@ -3,7 +3,7 @@
         <div class="education" >
             <h2 class="item_title">
                 <div>
-                    <div>
+                    <div class="title">
                         <OptionalLink :text="title" :link="link" />
                         <a v-if="moreInfo" v-on:click="$emit('more')" class="more">({{$t('more')}})</a>
                         <a v-if="transcript" :href="transcript" class="more">({{$t('transcript')}})</a>
@@ -63,6 +63,11 @@
     .date{
         font-size: 0.7em;
         color: $sub_title_color;
+    }
+    .title {
+        @media screen and (max-width: $breakpoint-phone) {
+            padding-bottom: 7px;
+        }
     }
     .sub_title{
         font-size: 0.7em;

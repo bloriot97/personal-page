@@ -54,7 +54,9 @@ export default {
             @return $clear_primary_color;
         }
     }
-
+    html {
+        scroll-behavior: smooth;
+    }
     body{
         margin: 0;
     }
@@ -101,6 +103,10 @@ export default {
     #picture {
         width: 80%;
         border-radius: 50%;
+        @media screen and (max-width: $breakpoint-phone) {
+            width: 50%;
+            margin-top: 35px;
+        }
     }
     #language_switch{
         position: fixed;
