@@ -278,11 +278,275 @@ const messages = {
     },
     fr: {
         sections: {
-            education: 'Formation',
-            personal_projects: 'Projets Personnels',
-            school_projects: 'Projets Étudiants',
-            professional_experience: 'Expérience Professionnelle',
+            education: 'Scolarité',
+            professional_experience: 'Expérience professionelle',
+            personal_projects: 'Projets personnels',
+            school_projects: 'Projets scolaires',
+            skills: 'Compétances',
         },
+        description: 'I am a computer science student curious about everything but mostly interested in data science, data engineering and web technologies. I am currently pursuing a double degree in France and Canada.',
+        email: 'bloriot97@gmail.com',
+        phone_number: '(+33) 6 77 96 17 22',
+        github: 'https://github.com/bloriot97',
+        education: {
+            ets: {
+                title: 'Maîtrise en génie des technologies de l’information ',
+                location: 'École de technologie supérieure',
+                location_link: 'https://www.etsmtl.ca',
+                geoLocation: 'Montréal, Canada',
+                date: '2019-2021',
+                descriptions: [
+                    {
+                        body: 'Approfondissement de mes connaissances en informatique notamment en interface humain-machine et sécurité internet. ',
+                    },
+                    {
+                        body: 'Gestion de projets et gestion de portefeuille de projets.',
+                    },
+                ],
+            },
+            utc: {
+                title: 'Diplôme d\'ingénieur en génie informatique filière Fouille de Données et Décisionnel',
+                location_link: 'https://www.utc.fr',
+                location: 'Université de technologie de Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: '2015-2021',
+                transcript: 'docs/transcript.pdf',
+                descriptions: [
+                    {
+                        body: 'Étude en sciences de l’informatique, en recherche opérationnelle, statistiques, algèbre et programmation.',
+                    },
+                    {
+                        body: 'Science et ingénerie des données, aide à la décision et calculs distribués',
+                    },
+                    {
+                        body: 'Autres sujets de sciences tels que la physique ou la chimie, les humanitées and l\'économie.',
+                    },
+                ],
+            },
+            ntua: {
+                title: 'Semestre d\'échange',
+                location: 'Université polytechnique nationale d\'Athènes',
+                location_link: 'https://www.ntua.gr/en',
+                geoLocation: 'Athènes, Grèce',
+                date: 'Printemps 2017',
+                descriptions: [
+                ],
+            },
+        },
+        personal_projects: {
+            names: {
+                title: 'Visualisation des modes des prénoms de 1900 à aujourd\'hui',
+                link: 'https://bloriot97.github.io/names/',
+                date: 'Automne 2019',
+                descriptions: [
+                    {
+                        body: 'Analyse des données et création d\'une visualisation intéractive.',
+                        key_outcome: [
+                            'Jupyter',
+                            'Analyse de données',
+                            't-SNE',
+                            'Vue',
+                        ],
+                    },
+                ],
+            },
+            hackathon: {
+                title: 'Équipe gagnante du Hackathon UTC 2017',
+                location: 'Université de technologie de Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Nov. 2017',
+                descriptions: [
+                    {
+                        body: 'Conception d\'un protocole de comunication entre les voitures afin de partager les données provenant de leurs capteurs dans le but d\'augmenter la sécuritée.',
+                        key_outcome: [
+                            'Arduino',
+                            'C++',
+                        ],
+                    },
+                ],
+                moreInfo: {
+                    pictures: ['hackathon.jpg'],
+                    description: [
+                        'During 24h we had the opportunity to design and implement a solution about the car of the future.',
+                        'We formed a team of 7 students, 6 computer science engineering student background and one mechanical engineering student.',
+                        'After some time we came up with a solution of sensor sharing between cars in order for them to have share knowledge at a lower level.',
+                        'Then we decided to implement a small proof of concept, as we did not have access to a connected car we created our own.'
+                    ],
+                }
+            },
+        },
+        school_projects: {
+            dev: {
+                title: 'Représentation des développeurs en fonction des paquets qu\'ils utilisent',
+                link: 'docs/TX.pdf',
+                location: 'Université de technologie de Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Printemps 2019',
+                descriptions: [
+                    {
+                        body: 'Le but de ce projet de recherche est de trouver des nouvelles techniques pour évaluer qui sont les développeurs centraux d\'un projet.',
+                        key_outcome: [
+                            'Analyse de graph',
+                            'Co-clustering',
+                        ],
+                    },
+                ],
+            },
+            pollutrack: {
+                title: 'Service de tracage de la pollution',
+                location: 'Université de technologie de Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Hiver 2017',
+                descriptions: [
+                    {
+                        body: 'Création d\'un appareil que l\'on place sur les bus pour tracer la pollution dans les villes avec plus de précison.',
+                        key_outcome: [
+                            'Angular',
+                            'node.js',
+                            'Arduino',
+                        ],
+                    },
+                ],
+            },
+            UViz: {
+                title: 'UViz',
+                location: 'Université de technologie de Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Hiver 2017',
+                descriptions: [
+                    {
+                        body: 'Un service de visualisation de graph qui permet aux étudiants de l\'utc d\'analyser et de planifier leur parcours académique.',
+                        key_outcome: [
+                            'Neo4J',
+                            'Docker',
+                            'node.js',
+                        ],
+                    },
+                ],
+            },
+        },
+        professional_experience: {
+            combient: {
+                title: 'Stage en développement',
+                location: 'Combient',
+                location_link: 'https://www.combient.com/',
+                geoLocation: 'Stockholm',
+                date: 'Été 2019',
+                descriptions: [
+                    {
+                        body: 'Conception et implémentation d\'une solution pour mesurer la "santé" des communautés opensources.',
+                        key_outcome: [
+                            'Python',
+                            'Dgraph',
+                            'Data Science',
+                        ],
+                    },
+                    {
+                        body: 'Amélioration d\'une platforme pour collecter des information relatives au communautés de développeurs.',
+                        key_outcome: [
+                            'Go',
+                            'Dgraph',
+                        ],
+                    },
+                ],
+            },
+            kth: {
+                title: 'Stage das un laboratoire de recherche',
+                location: 'KTH Royal Institute of Technology',
+                location_link: 'https://www.kth.se/en',
+                geoLocation: 'Stockholm',
+                date: 'Automne 2018',
+                descriptions: [
+                    {
+                        body: 'Immersion  dans un laboratoire de recherche en informatique théorique.',
+                    },
+                    {
+                        body: 'J’ai eu l’opportunité de travailler sur mon propre sujet de recherche et de collaborer à l\'écriture du papier associé. ',
+                    },
+                ],
+            },
+        },
+        skills:{
+            languages: {
+                title: 'Languages',
+                content: [
+                    {
+                        name: 'Francais',
+                        level: 'Langue maternelle '
+                    },
+                    {
+                        name: 'Anglais',
+                        level: 'Avancé, TOEIC 875'
+                    },
+                    {
+                        name: 'Espagnol',
+                        level: 'Notions'
+                    },
+                ]
+            },
+            cs: {
+                title: 'Computer',
+                sections: [
+                    {
+                        title: 'Science des données',
+                        content: [
+                            'XGBoost',
+                            't-SNE',
+                            'PCA',
+                            'Co-clustering',
+                            'SVM',
+                            'Random forest',
+                            'Bayesian decision theory',
+                            'distributed computation',
+                            'Jupyter',
+                            'Matplotlib',
+                            'Seaborn',
+                            'D3.js'
+                        ]
+                    },
+                    {
+                        title: 'Languages de programmation',
+                        content: [
+                            'Python',
+                            'Go',
+                            'Javascript',
+                            'Java',
+                            'Bash',
+                            'R',
+                        ]
+                    },
+                    {
+                        title: 'Front & Back',
+                        content: [
+                            'node.js',
+                            'SQL',
+                            'Graph-database (Neo4j, Dgraph)',
+                            'MongoDB',
+                            'Vue',
+                            'React (notions)',
+                        ]
+                    },
+                    {
+                        title: 'Autre',
+                        content: [
+                            'CI/CD',
+                            'Lecture & écriture de papiers scientifiques',
+                            'Arduino',
+                            'Latex',
+                        ]
+                    },
+                ]
+            },
+            management: {
+                title: 'Gestion',
+                content: [
+                    'Gestion de projets',
+                    'Gestion de portefeuille de projets',
+                ]
+            },
+        },
+        more: 'plus d\'info',
+        transcript: 'notes',
     }
 };
 

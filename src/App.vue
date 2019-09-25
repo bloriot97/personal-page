@@ -123,10 +123,18 @@ export default {
         color: inherit;
         text-decoration:none;
         transition: 0.1s;
+        display: inline-block;
+        text-decoration-skip: objects;
+        -webkit-text-decoration-skip: objects;
+
+    }
+    a::first-letter {
+        text-decoration: underline;
     }
     a:hover {
         color: $link_color;
-        transition: 0.1s;
+        transition: 0.2s;
+        text-decoration: underline;
     }
     footer {
         text-align: center;
