@@ -12,7 +12,8 @@ const messages = {
             school_projects: 'School Projects',
             skills: 'Language & Computer Skills',
         },
-        description: 'I am a computer science student curious about everything but mostly interested in data science, data engineering and web technologies. I am currently pursuing a double degree in France and Canada.',
+        description: `I am a *computer science* student curious about everything but mostly interested in **data science**, **data engineering** and **web technologies**. 
+        I am currently pursuing a double degree in France and Canada.`,
         email: 'bloriot97@gmail.com',
         phone_number: '(+33) 6 77 96 17 22',
         github: 'https://github.com/bloriot97',
@@ -204,7 +205,7 @@ const messages = {
                     },
                     {
                         name: 'English',
-                        level: 'Advanced, TOEIC 875'
+                        level: 'Advanced, TOEIC 975'
                     },
                     {
                         name: 'Spanish',
@@ -229,7 +230,8 @@ const messages = {
                             'Jupyter',
                             'Matplotlib',
                             'Seaborn',
-                            'D3.js'
+                            'D3.js',
+                            'Pandas ...'
                         ]
                     },
                     {
@@ -238,20 +240,18 @@ const messages = {
                             'Python',
                             'Go',
                             'Javascript',
+                            'HTML/CSS',
                             'Java',
-                            'Bash',
-                            'R',
                         ]
                     },
                     {
                         title: 'Front & Back',
                         content: [
+                            'Vue',
                             'node.js',
                             'SQL',
                             'Graph-database (Neo4j, Dgraph)',
                             'MongoDB',
-                            'Vue',
-                            'React (notions)',
                         ]
                     },
                     {
@@ -476,7 +476,7 @@ const messages = {
                     },
                     {
                         name: 'Anglais',
-                        level: 'Avancé, TOEIC 875'
+                        level: 'Avancé, TOEIC 975'
                     },
                     {
                         name: 'Espagnol',
@@ -501,7 +501,8 @@ const messages = {
                             'Jupyter',
                             'Matplotlib',
                             'Seaborn',
-                            'D3.js'
+                            'D3.js',
+                            'Pandas ...'
                         ]
                     },
                     {
@@ -510,20 +511,18 @@ const messages = {
                             'Python',
                             'Go',
                             'Javascript',
+                            'HTML/CSS',
                             'Java',
-                            'Bash',
-                            'R',
                         ]
                     },
                     {
                         title: 'Front & Back',
                         content: [
+                            'Vue',
                             'node.js',
                             'SQL',
                             'Graph-database (Neo4j, Dgraph)',
                             'MongoDB',
-                            'Vue',
-                            'React (notions)',
                         ]
                     },
                     {

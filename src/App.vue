@@ -4,8 +4,16 @@
           <div id="sidebar_container" class="no-print">
               <img id='picture' src="@/assets/picture.png"/>
               <h1> Benjamin LORIOT </h1>
+              <div class="links">
+                  <a href="https://www.linkedin.com/in/benjamin-loriot-54248a14a/">
+                      <font-awesome-icon :icon="['fab', 'linkedin']" />
+                  </a>
+                  <a href="https://github.com/bloriot97">
+                      <font-awesome-icon :icon="['fab', 'github']" />
+                  </a>
+              </div>
               <div id="description">
-                  {{$t('description')}}
+                  <vue-markdown>{{$t('description')}}</vue-markdown>
               </div>
               <div>
                   {{$t('email')}}
@@ -30,6 +38,7 @@
 import SideBar from './components/SideBar.vue'
 import MainContainer from './components/MainContainer.vue'
 import LanguageSwitch from './components/LanguageSwitch.vue'
+import VueMarkdown from 'vue-markdown'
 
 export default {
   name: 'app',
@@ -37,6 +46,7 @@ export default {
     SideBar,
     MainContainer,
     LanguageSwitch,
+    VueMarkdown,
   },
   data() {
     return {
@@ -91,7 +101,7 @@ export default {
             padding: 00px;
         }
         & > #description {
-            padding: 20px 0px 40px 0;
+            padding: 00px 0px 40px 0;
             @media screen and (max-width: $breakpoint-phone) {
                 padding: 20px 10px 40px 10px;
             }
@@ -150,6 +160,13 @@ export default {
         .no-print, .no-print *
         {
             display: none !important;
+        }
+    }
+
+    .links{
+        font-size: 1.8em;
+        & > a{
+            padding: 0 5px;
         }
     }
 </style>
