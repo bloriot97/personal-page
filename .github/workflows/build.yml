@@ -24,6 +24,7 @@ jobs:
         pwd 
         mkdir /home/runner/.ssh
         echo $CI_SSH_KEY > /home/runner/.ssh/id_rsa
+        ssh-add /home/runner/.ssh/id_rsa
         git clone git@github.com:bloriot97/bloriot97.github.io.git
         ls -al
         ls -al ./bloriot97.github.io.git
