@@ -22,7 +22,7 @@ jobs:
         npm install
         npm run build --if-present
         pwd 
-        echo $CI_SSH_KEY
+        mkdir /home/runner/.ssh
         echo $CI_SSH_KEY > /home/runner/.ssh/id_rsa
         git clone git@github.com:bloriot97/bloriot97.github.io.git
         ls -al
