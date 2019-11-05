@@ -9,7 +9,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [8.x, 10.x, 12.x]
+        node-version: [12.x]
 
     steps:
     - uses: actions/checkout@v1
@@ -22,7 +22,7 @@ jobs:
         npm install
         npm run build --if-present
         pwd 
-        echo $ci_ssh_key > ~/.ssh/id_rsa
+        echo $ci_ssh_key > /home/runner/.ssh/id_rsa
         git clone git@github.com:bloriot97/bloriot97.github.io.git
         ls -al
         ls -al ./bloriot97.github.io.git
