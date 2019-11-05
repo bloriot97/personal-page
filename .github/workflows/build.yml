@@ -25,7 +25,7 @@ jobs:
         npm run build --if-present
         pwd 
         mkdir /home/runner/.ssh
-        echo ${{ secrets.ssh_key }} > /home/runner/.ssh/id_rsa
+        echo '${{ secrets.ssh_key }}' > /home/runner/.ssh/id_rsa
         head /home/runner/.ssh/id_rsa
         chmod 400 /home/runner/.ssh/id_rsa
         eval `ssh-agent -s`
