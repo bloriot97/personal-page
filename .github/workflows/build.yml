@@ -32,6 +32,8 @@ jobs:
         rm -rf ./bloriot97.github.io/*
         cp -r ./dist/ ./bloriot97.github.io
         cd ./bloriot97.github.io
+        git config --global user.email "bloriot97@gmail.com"
+        git config --global user.name "GH CI Benjamin Loriot"
         git add .
         git commit -m 'Deploy '$GITHUB_SHA
         git push
