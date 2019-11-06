@@ -13,20 +13,21 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: webfactory/ssh-agent@v0.1.1
+      with:
+        ssh-private-key: ${{ secrets.ssh_key }}
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and deploy
+    - name: npm install and build
       env:
         CI: true
       run: |
         npm install
         npm run build --if-present
-        pwd 
-        mkdir /home/runner/.ssh
-        echo '${{ secrets.ssh_key }}' > /home/runner/.ssh/id_rsa
-        chmod 400 /home/runner/.ssh/id_rsa
-        ssh-agent bash -c 'ssh-add /home/runner/.ssh/id_rsa; git clone git@github.com:bloriot97/bloriot97.github.io.git'
+    - name: deploy
+      run: |
+        git clone git@github.com:bloriot97/bloriot97.github.io.git
         ls -al
         ls -al ./bloriot97.github.io
