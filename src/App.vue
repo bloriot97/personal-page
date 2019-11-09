@@ -2,7 +2,7 @@
   <div id="app">
       <div id="flex_container">
           <div id="sidebar_container" class="no-print">
-              <img id='picture' src="@/assets/picture.png"/>
+              <img id='picture' src="@/assets/picture.png" alt="Normally you should see me :)"/>
               <h1> Benjamin LORIOT </h1>
               <div class="links">
                   <a href="https://www.linkedin.com/in/benjamin-loriot-54248a14a/">
@@ -20,9 +20,6 @@
               </div>
               <div>
                   {{$t('phone_number')}}
-              </div>
-              <div>
-                  <a :href="$t('github')">{{$t('github')}}</a>
               </div>
               <SideBar selected="education"/>
           </div>

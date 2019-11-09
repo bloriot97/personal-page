@@ -1,11 +1,11 @@
 <template>
-    <div class="sidebar">
+    <nav class="sidebar">
         <ul id="example-1">
             <li v-for="(value, name) in $t('sections')" v-bind:key="name">
                 <a :href="'#' + name"> {{ value }} </a>
             </li>
         </ul>
-    </div>
+    </nav>
 </template>
 
 <script>
