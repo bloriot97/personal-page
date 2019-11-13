@@ -1,5 +1,18 @@
 <template>
     <div id="main_container">
+
+        <h1>
+            Projects
+        </h1>
+        <div class="project-container">
+            <portfolio-item
+                    v-for="(information, name) in $t('projects')"
+                    v-bind:key="name"
+                    :information="information"
+                    v-on:more="linkModal('projects', name)"
+            />
+        </div>
+
         <div
                 v-for="(section_name, section_id) in $t('sections')"
                 v-bind:key="section_name"
@@ -19,7 +32,7 @@
                         :link="edu.link"
                         :transcript="edu.transcript"
                         :moreInfo="edu.moreInfo"
-                        v-on:more="openModal(section_id, name)"
+                        v-on:more="linkModal(section_id, name)"
                 />
             </ul>
             <div v-else>
@@ -139,12 +152,14 @@
 <script>
     import CVItem from './CVItem.vue'
     import Modal from "./Modal";
+    import PortfolioItem from "./PortfolioItem";
 
     export default {
         name: "MainContainer",
         components: {
             Modal,
             CVItem,
+            PortfolioItem,
         },
         data() {
             return {
@@ -159,28 +174,48 @@
                 this.modalContent.section = section
                 this.modalContent.name = name
                 this.$refs.modal.open()
+            },
+            linkModal(section, name) {
+                this.$router.push({ name: 'more', params: { section, name } })
+            },
+            checkOpenModal(){
+                if (this.$route.name === 'more') {
+                    this.openModal(this.$route.params.section, this.$route.params.name)
+                } else {
+                    this.$refs.modal.close()
+                }
             }
         },
+        mounted() {
+            this.checkOpenModal()
+        },
+        watch:{
+            $route (){
+                this.checkOpenModal()
+                console.log('walah')
+            }
+        }
     }
 </script>
 
 <style scoped lang="scss">
-#main_container{
-    text-align: left;
-    padding: 30px 50px;
-    @media (max-width: $breakpoint-tablet) {
-        padding: 15px;
+    #main_container{
+        text-align: left;
+        padding: 30px 50px;
+        @media (max-width: $breakpoint-tablet) {
+            padding: 15px;
+        }
     }
-}
-.main_list {
-    list-style: none;
-    @media screen and (max-width: $breakpoint-phone) {
-        padding-left: 10px;
+    .main_list {
+        list-style: none;
+        @media screen and (max-width: $breakpoint-phone) {
+            padding-left: 10px;
+        }
+        @media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
+            padding-left: 30px;
+        }
     }
-    @media screen and (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
-        padding-left: 30px;
-    }
-}
+
     h1 {
         border-bottom: 3px solid currentColor;
         display: inline-block;
@@ -219,5 +254,30 @@
     }
     .cs_item:not(:last-child)::after {
         content: "\00b7";
+    }
+
+    .project-container{
+        padding: 20px 0;
+
+        display: grid;
+
+        @include sm {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        @include md {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include lg {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include xl {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include xxl {
+            grid-template-columns: repeat(5, 1fr);
+        }
+        justify-items: center;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
     }
 </style>

@@ -4,7 +4,7 @@
             <div class="modal_content">
                 <img :src="parsed_pictures[0]">
             </div>
-            <a class="close" v-on:click="close()"></a>
+            <a class="close" v-on:click="goHome()"></a>
             <div class="content">
                 <h1>{{$t(path + '.title')}}</h1>
                 <p v-for="(paragraph, index) in $t(path + '.moreInfo.description')" v-bind:key="index">
@@ -42,9 +42,12 @@
             close() {
                 this.show = false;
             },
+            goHome(){
+                this.$router.push({name: 'resume'})
+            },
             clickOutsideClose(event) {
                 if (event.target.className === 'modal_container'){
-                    this.close()
+                    this.goHome()
                 }
             }
         },
