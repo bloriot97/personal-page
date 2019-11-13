@@ -23,6 +23,8 @@ const messages = {
                 location: 'University of Technology of Compiègne',
                 geoLocation: 'Compiègne, France',
                 date: 'Nov. 2017',
+                link: 'https://bloriot97.github.io/names/',
+                github: 'https://bloriot97.github.io/names/',
                 description: 'Designing of a concept of a car network that improves security not only by communicating information but also by sharing sensors.',
                 moreInfo: {
                     pictures: ['hackathon.jpg'],
@@ -37,28 +39,7 @@ const messages = {
                         'C++',
                     ],
                 }
-            },
-            hackathon2: {
-                title: 'Wining team of the Hackathon UTC 2017',
-                shortTitle: 'Hackathon UTC',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Nov. 2017',
-                descriptions: 'Designing of a concept of a car network that improves security not only by communicating information but also by sharing sensors.',
-                moreInfo: {
-                    pictures: ['hackathon.jpg'],
-                    description: [
-                        'During 24h we had the opportunity to design and implement a solution about the car of the future.',
-                        'We formed a team of 7 students, 6 computer science engineering student background and one mechanical engineering student.',
-                        'After some time we came up with a solution of sensor sharing between cars in order for them to have share knowledge at a lower level.',
-                        'Then we decided to implement a small proof of concept, as we did not have access to a connected car we created our own.'
-                    ],
-                    key_outcome: [
-                        'Arduino',
-                        'C++',
-                    ],
-                }
-            },
+            }
         },
         education: {
             ets: {

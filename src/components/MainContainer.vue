@@ -6,13 +6,12 @@
         </h1>
         <div class="project-container">
             <portfolio-item
-                    v-for="(information, name) in $t('projects')"
-                    v-bind:key="name"
-                    :information="information"
-                    v-on:more="linkModal('projects', name)"
+                v-for="(information, name) in $t('projects')"
+                v-bind:key="name"
+                :information="information"
+                v-on:more="linkModal('projects', name)"
             />
         </div>
-
         <div
                 v-for="(section_name, section_id) in $t('sections')"
                 v-bind:key="section_name"
@@ -89,62 +88,6 @@
                 :section="modalContent.section"
                 :name="modalContent.name"
         />
-        <!-- <h1 id="education">{{ $t('sections.education') }}</h1>
-        <ul class="main_list">
-            <CVItem
-                    v-for="(edu, name) in $t('education')"
-                    v-bind:key="name"
-                    :title="edu.title"
-                    :location="edu.location"
-                    :location_link="edu.location_link"
-                    :geoLocation="edu.geoLocation"
-                    :date="edu.date"
-                    :descriptions="edu.descriptions"
-            />
-        </ul>
-
-        <h1 id="personal_projects">{{ $t('sections.personal_projects') }}</h1>
-        <ul class="main_list">
-            <CVItem
-                    v-for="(edu, name) in $t('personal_projects')"
-                    v-bind:key="name"
-                    :title="edu.title"
-                    :location="edu.location"
-                    :geoLocation="edu.geoLocation"
-                    :date="edu.date"
-                    :descriptions="edu.descriptions"
-                    :techno="edu.techno"
-                    :link="edu.link"
-            />
-        </ul>
-
-        <h1 id="school_projects">{{ $t('sections.school_projects') }}</h1>
-        <ul class="main_list">
-            <CVItem
-                    v-for="(edu, name) in $t('school_projects')"
-                    v-bind:key="name"
-                    :title="edu.title"
-                    :location="edu.location"
-                    :geoLocation="edu.geoLocation"
-                    :date="edu.date"
-                    :descriptions="edu.descriptions"
-                    :techno="edu.techno"
-            />
-        </ul>
-
-        <h1 id="professional_experience">{{ $t('sections.professional_experience') }}</h1>
-        <ul class="main_list">
-            <CVItem
-                    v-for="(edu, name) in $t('professional_experience')"
-                    v-bind:key="name"
-                    :title="edu.title"
-                    :location="edu.location"
-                    :geoLocation="edu.geoLocation"
-                    :date="edu.date"
-                    :descriptions="edu.descriptions"
-                    :techno="edu.techno"
-            />
-        </ul> -->
         <footer> Designed and developed by Benjamin Loriot </footer>
     </div>
 </template>

@@ -12,7 +12,7 @@ $side_bar_width: 300px;
 $side_bar_color: $primary_color;
 
 @function set-button-text-color($color) {
-  @if (lightness( $color ) > 40) {
+  @if (lightness( $color ) > 60) {
     @return $primary_color;
   }
   @else {

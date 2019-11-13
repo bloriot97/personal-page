@@ -1,15 +1,48 @@
 <template>
     <div class="modal_container" v-if="show" v-on:click="clickOutsideClose">
         <div class="modal">
-            <div class="modal_content">
-                <img :src="parsed_pictures[0]">
+            <div
+                class="image"
+                :style="{ backgroundImage: `url('${parsed_pictures[0]}')` }"
+            >
             </div>
             <a class="close" v-on:click="goHome()"></a>
-            <div class="content">
-                <h1>{{$t(path + '.title')}}</h1>
-                <p v-for="(paragraph, index) in $t(path + '.moreInfo.description')" v-bind:key="index">
-                    {{paragraph}}
-                </p>
+            <div class="content_container">
+                <div class="content">
+                    <div class="title">
+                        <div class="links side-link">
+                                <a
+                                        v-if="information.link"
+                                        :href="information.link"
+                                >
+                                    <font-awesome-icon :icon="['fas', 'link']" />
+                                </a>
+                                <a
+                                        v-if="information.github"
+                                        :href="information.github"
+                                >
+                                    <font-awesome-icon :icon="['fab', 'github']" />
+                                </a>
+                            </div>
+                        <h1>
+                            {{$t(path + '.title')}}
+                        </h1>
+                    </div>
+
+                    <ul class="outcomes">
+                        <li
+                                v-for="name in information.moreInfo.key_outcome"
+                                v-bind:key="name"
+                        >
+                            {{name}}
+                        </li>
+                    </ul>
+                    <div class="body">
+                        <p v-for="(paragraph, index) in $t(path + '.moreInfo.description')" v-bind:key="index">
+                            {{paragraph}}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -28,6 +61,9 @@
             }
         },
         computed: {
+            information() {
+                return this.$t(this.path);
+            },
             parsed_pictures() {
                 return this.$t(this.section + '.' + this.name + '.moreInfo.pictures').map((img) => require('@/assets/' + img))
             },
@@ -64,11 +100,14 @@
         left: 0;
         z-index: 1000;
     }
-    .modal_content {
+    .image {
         width: 100%;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
     }
     .content {
-        padding: 0 30px;
+        margin: 0 30px 0 65px;
     }
     .modal {
         height: 90%;
@@ -111,4 +150,43 @@
     img {
         width: 100%;
     }
+
+    .title {
+
+        & > h1{
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+    }
+
+    .side-link {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        transform: translate(-50px, 25px);
+        color: $sub_title_color;
+    }
+
+
+    .outcomes{
+        list-style-type: none;
+        padding: 0;
+        margin: 0px 0 20px 0;
+        & > li {
+            display:inline-block;
+            padding: 3px 6px;
+            background-color: $sub_title_color;
+            color: set-button-text-color($sub_title_color);
+            margin: 0px 10px 0 0;
+        }
+    }
+    .content_container{
+        display: flex;
+        justify-content: center;
+        & > .content{
+            max-width: 500px;
+        }
+    }
+
 </style>
