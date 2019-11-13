@@ -1,51 +1,56 @@
 <template>
-    <div class="modal_container" v-if="show" v-on:click="clickOutsideClose">
-        <div class="modal">
-            <div
-                class="image"
-                :style="{ backgroundImage: `url('${parsed_pictures[0]}')` }"
-            >
-            </div>
-            <a class="close" v-on:click="goHome()"></a>
-            <div class="content_container">
-                <div class="content">
-                    <div class="title">
-                        <div class="links side-link">
-                                <a
-                                        v-if="information.link"
-                                        :href="information.link"
-                                >
-                                    <font-awesome-icon :icon="['fas', 'link']" />
-                                </a>
-                                <a
+    <transition name="fade">
+        <div class="modal_container" v-if="show" v-on:click="clickOutsideClose">
+            <div class="modal">
+                <div
+                    class="image"
+                    :style="{ backgroundImage: `url('${parsed_pictures[0]}')` }"
+                >
+                </div>
+                <a class="close" v-on:click="goHome()"></a>
+                <div class="content_container">
+                    <div class="content">
+                        <div class="title">
+                            <div class="links side-link">
+                                    <a
+                                            v-if="information.link"
+                                            :href="information.link"
+                                    >
+                                        <font-awesome-icon :icon="['fas', 'link']" />
+                                    </a>
+                                    <a
                                         v-if="information.github"
                                         :href="information.github"
-                                >
-                                    <font-awesome-icon :icon="['fab', 'github']" />
-                                </a>
-                            </div>
-                        <h1>
-                            {{$t(path + '.title')}}
-                        </h1>
-                    </div>
+                                    >
+                                        <font-awesome-icon :icon="['fab', 'github']" />
+                                    </a>
+                                </div>
+                            <h1>
+                                {{information.title}}
+                            </h1>
+                        </div>
 
-                    <ul class="outcomes">
-                        <li
-                                v-for="name in information.moreInfo.key_outcome"
-                                v-bind:key="name"
-                        >
-                            {{name}}
-                        </li>
-                    </ul>
-                    <div class="body">
-                        <p v-for="(paragraph, index) in $t(path + '.moreInfo.description')" v-bind:key="index">
-                            {{paragraph}}
-                        </p>
+                        <ul class="outcomes">
+                            <li
+                                    v-for="name in information.moreInfo.key_outcome"
+                                    v-bind:key="name"
+                            >
+                                {{name}}
+                            </li>
+                        </ul>
+                        <div class="body">
+                            <p
+                                v-for="(paragraph, index) in information.moreInfo.description"
+                                v-bind:key="index"
+                            >
+                                {{paragraph}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
@@ -107,13 +112,13 @@
         background-size: cover;
     }
     .content {
-        margin: 0 30px 0 65px;
+        margin: 0 30px 30px 65px;
     }
     .modal {
         height: 90%;
         width: 90%;
         max-width: 900px;
-        max-height: 700px;
+        max-height: 900px;
         background-color: $clear_primary_color;
         position: fixed;
         top: 50vh;
@@ -187,6 +192,13 @@
         & > .content{
             max-width: 500px;
         }
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .3s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
     }
 
 </style>

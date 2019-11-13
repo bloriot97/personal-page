@@ -2,6 +2,7 @@
     <div
         class="portfolio-item"
         v-on:click="$emit('more')"
+        :title="information.title"
     >
         <div
             class="thumbnail"
@@ -24,7 +25,6 @@
         name: "PortfolioItem",
         data() {
             return {
-                imgSrc: require('@/assets/hackathon.jpg'),
             }
         },
         props: {
@@ -34,6 +34,9 @@
             },
         },
         computed: {
+            imgSrc() {
+                return require('@/assets/' + this.information.moreInfo.pictures[0])
+            }
         }
     }
 </script>

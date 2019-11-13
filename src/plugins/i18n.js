@@ -8,8 +8,6 @@ const messages = {
         sections: {
             education: 'Education',
             professional_experience: 'Professional Experience',
-            personal_projects: 'Personal Projects',
-            school_projects: 'School Projects',
             skills: 'Language & Computer Skills',
         },
         description: `I am a *computer science* student curious about everything but mostly interested in **data science**, **data engineering** and **web technologies**. 
@@ -39,7 +37,75 @@ const messages = {
                         'C++',
                     ],
                 }
-            }
+            },
+            names: {
+                title: 'French names trend visualisation from the past century until today',
+                shortTitle: 'NamesViz',
+                link: 'https://bloriot97.github.io/names/',
+                date: 'Fall 2019',
+                description: 'Analysis of the data, and creation of an interactive visualisation.',
+                moreInfo: {
+                    pictures: ['names.jpg'],
+                    description: [],
+                    key_outcome: [
+                        'Jupyter',
+                        'Data Analysis',
+                        't-SNE',
+                        'Vue',
+                    ],
+                },
+            },
+            UViz: {
+                title: 'UViz',
+                shortTitle: 'UViz',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Winter 2017',
+                description: 'A graph visualization service that allows UTC students to analyse and plan their academic career.',
+                moreInfo: {
+                    pictures: ['uvector.jpg'],
+                    description: [],
+                    key_outcome: [
+                        'Neo4J',
+                        'Docker',
+                        'node.js',
+                    ],
+                },
+            },
+            dev: {
+                title: 'Embedding of developers based on the libraries they use',
+                shortTitle: 'Dev',
+                link: 'docs/TX.pdf',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Spring 2019',
+                description: 'The goal of this research project is to find new techniques to asses who are the core developers of a project.',
+                moreInfo: {
+                    pictures: ['dev.jpg'],
+                    description: [],
+                    key_outcome: [
+                        'Graph analysis',
+                        'Co-clustering',
+                    ],
+                },
+            },
+            pollutrack: {
+                title: 'Pollution tracking service',
+                shortTitle: 'PolluTrack',
+                location: 'University of Technology of Compiègne',
+                geoLocation: 'Compiègne, France',
+                date: 'Winter 2017',
+                description: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
+                moreInfo: {
+                    pictures: ['pollutrack.jpg'],
+                    description: [],
+                    key_outcome: [
+                        'Angular',
+                        'node.js',
+                        'Arduino',
+                    ],
+                },
+            },
         },
         education: {
             ets: {
@@ -83,98 +149,6 @@ const messages = {
                 geoLocation: 'Athens, Greece',
                 date: 'Spring 2017',
                 descriptions: [
-                ],
-            },
-        },
-        personal_projects: {
-            names: {
-                title: 'French names trend visualisation from the past century until today',
-                link: 'https://bloriot97.github.io/names/',
-                date: 'Fall 2019',
-                descriptions: [
-                    {
-                        body: 'Analysis of the data, and creation of an interactive visualisation.',
-                        key_outcome: [
-                            'Jupyter',
-                            'Data Analysis',
-                            't-SNE',
-                            'Vue',
-                        ],
-                    },
-                ],
-            },
-            hackathon: {
-                title: 'Wining team of the Hackathon UTC 2017',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Nov. 2017',
-                descriptions: [
-                    {
-                        body: 'Designing of a concept of a car network that improves security not only by communicating information but also by sharing sensors.',
-                        key_outcome: [
-                            'Arduino',
-                            'C++',
-                        ],
-                    },
-                ],
-                moreInfo: {
-                    pictures: ['hackathon.jpg'],
-                    description: [
-                        'During 24h we had the opportunity to design and implement a solution about the car of the future.',
-                        'We formed a team of 7 students, 6 computer science engineering student background and one mechanical engineering student.',
-                        'After some time we came up with a solution of sensor sharing between cars in order for them to have share knowledge at a lower level.',
-                        'Then we decided to implement a small proof of concept, as we did not have access to a connected car we created our own.'
-                    ],
-                }
-            },
-        },
-        school_projects: {
-            dev: {
-                title: 'Embedding of developers based on the libraries they use',
-                link: 'docs/TX.pdf',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Spring 2019',
-                descriptions: [
-                    {
-                        body: 'The goal of this research project is to find new techniques to asses who are the core developers of a project.',
-                        key_outcome: [
-                            'Graph analysis',
-                            'Co-clustering',
-                        ],
-                    },
-                ],
-            },
-            pollutrack: {
-                title: 'Pollution tracking service',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Winter 2017',
-                descriptions: [
-                    {
-                        body: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
-                        key_outcome: [
-                            'Angular',
-                            'node.js',
-                            'Arduino',
-                        ],
-                    },
-                ],
-            },
-            UViz: {
-                title: 'UViz',
-                location: 'University of Technology of Compiègne',
-                geoLocation: 'Compiègne, France',
-                date: 'Winter 2017',
-                descriptions: [
-                    {
-                        body: 'A graph visualization service that allows UTC students to analyse and plan their academic career.',
-                        key_outcome: [
-                            'Neo4J',
-                            'Docker',
-                            'node.js',
-                        ],
-                    },
                 ],
             },
         },
