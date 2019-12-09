@@ -46,7 +46,9 @@ const messages = {
                 description: 'Analysis of the data, and creation of an interactive visualisation.',
                 moreInfo: {
                     pictures: ['names.jpg'],
-                    description: [],
+                    description: [
+                        'Analysis of the data, and creation of an interactive visualisation.'
+                    ],
                     key_outcome: [
                         'Jupyter',
                         'Data Analysis',
@@ -64,7 +66,9 @@ const messages = {
                 description: 'A graph visualization service that allows UTC students to analyse and plan their academic career.',
                 moreInfo: {
                     pictures: ['uvector.jpg'],
-                    description: [],
+                    description: [
+                        'A graph visualization service that allows UTC students to analyse and plan their academic career.'
+                    ],
                     key_outcome: [
                         'Neo4J',
                         'Docker',
@@ -82,7 +86,9 @@ const messages = {
                 description: 'The goal of this research project is to find new techniques to asses who are the core developers of a project.',
                 moreInfo: {
                     pictures: ['dev.jpg'],
-                    description: [],
+                    description: [
+                        'The goal of this research project is to find new techniques to asses who are the core developers of a project.'
+                    ],
                     key_outcome: [
                         'Graph analysis',
                         'Co-clustering',
@@ -98,7 +104,12 @@ const messages = {
                 description: 'Creation of a device in order to track the pollution in cities with a better accuracy.',
                 moreInfo: {
                     pictures: ['pollutrack.jpg'],
-                    description: [],
+                    description: [
+                        'During this school project we had the opportunity to design a device to help cities to track pollution in order to improve urban planning.',
+                        'The device is made to be installed on public transportation or various moving cars such as mail delivery services.',
+                        'It was able to measure several variables and to store them for further analysis.',
+                        'The we implemented a kriging algorithm to be able to extrapolate information.'
+                    ],
                     key_outcome: [
                         'Angular',
                         'node.js',
@@ -153,6 +164,23 @@ const messages = {
             },
         },
         professional_experience: {
+            index: {
+                title: 'Junior Web Developer',
+                location: 'Index',
+                location_link: 'https://www.indexwebmarketing.com/',
+                geoLocation: 'Montreal',
+                date: 'Since Dec 2019',
+                descriptions: [
+                    {
+                        body: 'Web developer for Alya.ai',
+                        key_outcome: [
+                            'Next.js',
+                            'React',
+                            'GraphQL',
+                        ],
+                    },
+                ],
+            },
             combient: {
                 title: 'Developer Intern Summer Internship',
                 location: 'Combient',
@@ -423,6 +451,23 @@ const messages = {
             },
         },
         professional_experience: {
+            index: {
+                title: 'Développeur web junior',
+                location: 'Index',
+                location_link: 'https://www.indexwebmarketing.com/',
+                geoLocation: 'Montréal',
+                date: 'Depuis Déc 2019',
+                descriptions: [
+                    {
+                        body: 'Développeur web pour Alya.ai',
+                        key_outcome: [
+                            'Next.js',
+                            'React',
+                            'GraphQL',
+                        ],
+                    },
+                ],
+            },
             combient: {
                 title: 'Stage en développement',
                 location: 'Combient',

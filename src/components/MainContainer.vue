@@ -135,7 +135,6 @@
         watch:{
             $route (){
                 this.checkOpenModal()
-                console.log('walah')
             }
         }
     }
