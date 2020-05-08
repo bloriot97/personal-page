@@ -15,7 +15,7 @@ const messages = {
         description: `I am a *computer science* student curious about everything but mostly interested in **data science**, **data engineering** and **web technologies**. 
         I am currently pursuing a double degree in France and Canada.`,
         email: 'bloriot97@gmail.com',
-        phone_number: '(+33) 6 77 96 17 22',
+        phone_number: '(+33) 6 35 16 25 48',
         education: {
             ets: {
                 title: 'Master of Engineering in Information Technology',
@@ -285,7 +285,7 @@ const messages = {
         },
         description: 'I am a computer science student curious about everything but mostly interested in data science, data engineering and web technologies. I am currently pursuing a double degree in France and Canada.',
         email: 'bloriot97@gmail.com',
-        phone_number: '(+33) 6 77 96 17 22',
+        phone_number: '(+33) 6 35 16 25 48',
         education: {
             ets: {
                 title: 'Maîtrise en génie des technologies de l’information ',

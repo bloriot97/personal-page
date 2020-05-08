@@ -5,7 +5,7 @@
               <img id='picture' src="@/assets/picture.png" alt="Normally you should see me :)"/>
               <h1> Benjamin LORIOT </h1>
               <div class="links">
-                  <a href="https://www.linkedin.com/in/benjamin-loriot-54248a14a/">
+                  <a href="https://www.linkedin.com/in/bloriot">
                       <font-awesome-icon :icon="['fab', 'linkedin']" />
                   </a>
                   <a href="https://github.com/bloriot97">
