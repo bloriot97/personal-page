@@ -5,6 +5,9 @@ Vue.use(VueI18n);
 
 const messages = {
     en: {
+        hey_title: "Hey ! 👋 I'm Benjamin Loriot",
+        hey_subtitle: "Fullstack software engineer",
+        my_resume: "My resume",
         sections: {
             education: 'Education',
             professional_experience: 'Professional Experience',
@@ -276,6 +279,9 @@ const messages = {
         transcript: 'transcript',
     },
     fr: {
+        hey_title: "Salut ! 👋 Je suis Benjamin Loriot",
+        hey_subtitle: "Ingenieur logiciel fullstack",
+        my_resume: "Mon CV",
         sections: {
             education: 'Scolarité',
             professional_experience: 'Expérience professionelle',
